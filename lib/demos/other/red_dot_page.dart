@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import '/base_appbar.dart';
 
 class RedDotPage extends StatefulWidget {
@@ -29,22 +29,22 @@ class _RedDotPageState extends State<RedDotPage> {
           body: Column(
             children: <Widget>[
               const SizedBox(height: 15),
-              Badge(
+              badges.Badge(
                 badgeContent: const Text('3'),
                 child: const Icon(Icons.settings),
               ),
               const SizedBox(height: 15),
-              Badge(child: const Icon(Icons.settings)),
+              badges.Badge(child: const Icon(Icons.settings)),
               const SizedBox(height: 15),
-              Badge(
+              badges.Badge(
                 showBadge: false,
                 child: const Icon(Icons.settings),
               ),
               const SizedBox(height: 15),
-              Badge(
-                shape: BadgeShape.square,
+              badges.Badge(
+                shape: badges.BadgeShape.square,
                 borderRadius: BorderRadius.circular(5),
-                position: BadgePosition.topEnd(top: -12, end: -20),
+                position: badges.BadgePosition.topEnd(top: -12, end: -20),
                 padding: const EdgeInsets.all(2),
                 badgeContent:
                     const Text('New', style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
@@ -61,15 +61,15 @@ class _RedDotPageState extends State<RedDotPage> {
       items: [
         BottomNavigationBarItem(
           label: 'Events',
-          icon: Badge(
+          icon: badges.Badge(
             child: const Icon(Icons.event),
           ),
         ),
         BottomNavigationBarItem(
           label: 'Messages',
-          icon: Badge(
+          icon: badges.Badge(
             toAnimate: false,
-            position: BadgePosition.topEnd(top: -20, end: -20),
+            position: badges.BadgePosition.topEnd(top: -20, end: -20),
             badgeContent: Text(
               _count.toString(),
               style: const TextStyle(color: Colors.white, fontSize: 12),
@@ -79,8 +79,8 @@ class _RedDotPageState extends State<RedDotPage> {
         ),
         BottomNavigationBarItem(
           label: 'Settings',
-          icon: Badge(
-            shape: BadgeShape.circle,
+          icon: badges.Badge(
+            shape: badges.BadgeShape.circle,
             borderRadius: BorderRadius.circular(100),
             badgeContent: Container(
               height: 5,
@@ -109,17 +109,17 @@ class _RedDotPageState extends State<RedDotPage> {
         child: TabBar(
           tabs: [
             Tab(
-              icon: Badge(
+              icon: badges.Badge(
                 badgeColor: Colors.blue,
                 badgeContent: const Text('3', style: TextStyle(color: Colors.red)),
                 child: const Icon(Icons.account_balance_wallet, color: Colors.white),
               ),
             ),
             Tab(
-              icon: Badge(
-                shape: BadgeShape.square,
+              icon: badges.Badge(
+                shape: badges.BadgeShape.square,
                 borderRadius: BorderRadius.circular(5),
-                position: BadgePosition.topEnd(top: -12, end: -20),
+                position: badges.BadgePosition.topEnd(top: -12, end: -20),
                 padding: const EdgeInsets.all(2),
                 badgeContent:
                     const Text('NEW', style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),

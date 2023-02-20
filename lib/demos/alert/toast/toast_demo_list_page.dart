@@ -33,7 +33,7 @@ class ToastDemoListPage extends StatelessWidget {
         }
         if (str == '加载中') {
           JhProgressHUD.showLoadingText();
-          Future.delayed(const Duration(seconds: 5), () {
+          Future.delayed(const Duration(seconds: 20), () {
             JhProgressHUD.hide();
           });
         }

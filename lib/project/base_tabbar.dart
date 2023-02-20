@@ -4,7 +4,7 @@
 ///  description: tabbar基类
 
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:provider/provider.dart';
 import '/jh_common/utils/jh_image_utils.dart';
 import '/jh_common/widgets/base_refresh_view.dart';
@@ -48,13 +48,13 @@ class _BaseTabBarState extends State<BaseTabBar> {
         label: '发现',
 //      icon: JhAssetImage('tab/nav_tab_3', width: _iconWH),
         activeIcon: JhAssetImage('tab/nav_tab_3_on', width: _iconWH, color: iconColor),
-        icon: Badge(
+        icon: badges.Badge(
             padding: const EdgeInsets.all(4),
-            position: BadgePosition.topEnd(top: -4, end: -4),
+            position: badges.BadgePosition.topEnd(top: -4, end: -4),
             child: const JhAssetImage('tab/nav_tab_3', width: _iconWH)),
-//      activeIcon: Badge(
+//      activeIcon: badges.Badge(
 //          padding: EdgeInsets.all(4),
-//          position: BadgePosition.topRight(top: -4, right: -4),
+//          position: badges.BadgePosition.topRight(top: -4, right: -4),
 //          child: JhAssetImage('tab/nav_tab_3_on', width: _iconWH)),
       ),
       BottomNavigationBarItem(
